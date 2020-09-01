@@ -1,0 +1,13 @@
+package com.ezshare.Questionnaire.services;
+
+import java.util.Map;
+
+import fr.sita.movie.datamodel.AddressModel;
+
+public class AdderessDAO extends GenericDAO<AddressModel, String> {
+
+	@Override
+	public void setParameters(Map<String, Object> parameters, AddressModel criteria) {
+		parameters.put("pTitle", criteria.getPincode());
+	}
+}

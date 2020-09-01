@@ -1,0 +1,13 @@
+package fr.sita.movie.service;
+
+import java.util.Map;
+
+import fr.sita.movie.datamodel.ContactModel;
+
+public class ContactDAO extends GenericDAO<ContactModel, String> {
+
+	@Override
+	public void setParameters(Map<String, Object> parameters, ContactModel criteria) {
+		parameters.put("pTitle", criteria.getEmail());
+	}
+}
